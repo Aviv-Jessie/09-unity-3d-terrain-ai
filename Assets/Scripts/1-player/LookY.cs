@@ -3,10 +3,12 @@
 /**
  * This component rotates its object according to the mouse movement in the Y axis, in a given rotation speed.
  */
-public class LookY : MonoBehaviour { 
+public class LookY : MonoBehaviour
+{
     [SerializeField] private float _speedRotation = 1f;
 
-    void Update() {
+    void Update()
+    {
         float _mouseY = Input.GetAxis("Mouse Y");
         Debug.Log("mouse y = " + _mouseY);
         Vector3 rotation = transform.localEulerAngles;

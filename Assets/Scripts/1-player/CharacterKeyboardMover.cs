@@ -16,15 +16,11 @@ public class CharacterKeyboardMover : MonoBehaviour
 
     // the jump force of the character
     [Tooltip("Jump of player keyboard-movement, in meters/second")]
-    [SerializeField] public float jumpForce = 6.0f;
+    [SerializeField] public float jumpForce = 10.0f;
 
     // the run speed
     [Tooltip("Run of player keyboard-movement, in meters/second")]
     [SerializeField] public float Run = 10.0f;
-
-    // the crawl speed
-    [Tooltip("Crawl of player keyboard-movement, in meters/second")]
-    [SerializeField] public float Crawl = 2.0f;
 
     // groundedpPlayer = character controller -> isGrounded.
     private bool groundedPlayer;
@@ -33,20 +29,21 @@ public class CharacterKeyboardMover : MonoBehaviour
 
     void Start()
     {
-        // init the _cc. and velocity.
+        // init the _cc- character controller
         _cc = GetComponent<CharacterController>();
     }
 
     void Update()
     {
-        // the movement factor
+        // the movement factor to update the movement..
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
 
-        // update the movement..
+        // walking
         velocity.x = x * _speed;
         velocity.z = z * _speed;
 
+        // update the "groundedPlayer"- if touching the ground during the last move ?
         groundedPlayer = _cc.isGrounded;
 
         // gravity takes the player down
@@ -67,28 +64,6 @@ public class CharacterKeyboardMover : MonoBehaviour
             velocity.x = x * Run;
             velocity.z = z * Run;
         }
-
-
-        var rotation = Quaternion.identity;
-        // the player is on the ground and we clicked "Ctrl" meaning crawl
-        if ((Input.GetButton("Crawl")) && groundedPlayer)
-        {
-            velocity.x = x * Crawl;
-            velocity.z = z * Crawl;
-
-            // make the player crawl
-            _cc.height = 0.5f;
-            rotation *= Quaternion.Euler(90, 0, 0); // this add a 90 degrees Y rotation
-            transform.rotation = Quaternion.Slerp(transform.rotation, rotation, 1);
-        }
-        else
-        {
-            // back to stand up..
-            _cc.height = 2f;
-            rotation *= Quaternion.Euler(0, 0, 0);
-            transform.rotation = Quaternion.Slerp(transform.rotation, rotation, 1);
-        }
-
 
         // update the transform from local transform to the "world space transform"
         velocity = transform.TransformDirection(velocity);
