@@ -7,7 +7,34 @@ A project with step-by-step scenes illustrating how to construct a 3D game, incl
 * Enemy AI;
 * Target visualization with gizmmos.
 
+
+
+Character Keyboard mover Script-
+
+09-unity-3d-terrain-ai/Assets/Scripts/1-player/CharacterKeyboardMover.cs 
+
+we added an option of running and jumping , and jumping while running.
+
+
+Hey Switcher Script-
+
+09-unity-3d-terrain-ai/Assets/Scripts/3-objects/HeySwitcher.cs
+
+we added a character that makes a dialog when player is close enough and presses "E" 
+
+
+Light switcher Script-
+
+09-unity-3d-terrain-ai/Assets/Scripts/3-objects/LightSwitch.cs 
+
+we added a light  bolb that turnning on\off when player is close enough and pessses "E"
+
+
+
 ## Credits
+
+Assignment solvers:
+Jessica fliker, Omri yonatani, Aviv vexler.
 
 Programming:
 * Michael Lemberger
