@@ -7,6 +7,11 @@ A project with step-by-step scenes illustrating how to construct a 3D game, incl
 * Enemy AI;
 * Target visualization with gizmmos.
 
+Our game in itch website:
+
+https://aviv-jessie.itch.io/09-unity-3d-terrain-ai-game
+
+
 
 
 Character Keyboard mover Script-
