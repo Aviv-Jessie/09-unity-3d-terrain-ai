@@ -7,28 +7,28 @@ A project with step-by-step scenes illustrating how to construct a 3D game, incl
 * Enemy AI;
 * Target visualization with gizmmos.
 
-Our game in itch website:
+## Our game in itch website:
 
 https://aviv-jessie.itch.io/09-unity-3d-terrain-ai-game
 
 
 
 
-Character Keyboard mover Script-
+## Character Keyboard mover Script-
 
 09-unity-3d-terrain-ai/Assets/Scripts/1-player/CharacterKeyboardMover.cs 
 
 we added an option of running and jumping , and jumping while running.
 
 
-Hey Switcher Script-
+## Hey Switcher Script-
 
 09-unity-3d-terrain-ai/Assets/Scripts/3-objects/HeySwitcher.cs
 
 we added a character that makes a dialog when player is close enough and presses "E" 
 
 
-Light switcher Script-
+## Light switcher Script-
 
 09-unity-3d-terrain-ai/Assets/Scripts/3-objects/LightSwitch.cs 
 
