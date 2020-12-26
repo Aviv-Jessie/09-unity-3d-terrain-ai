@@ -33,8 +33,6 @@ we added a character that makes a dialog when player is close enough and presses
 
 ## Light switcher Script-
 
-09-unity-3d-terrain-ai/Assets/Scripts/3-objects/LightSwitch.cs 
-
 
 [09-unity-3d-terrain-ai/Assets/Scripts/3-objects/LightSwitch.cs ](https://github.com/Aviv-Jessie/09-unity-3d-terrain-ai/blob/main/Assets/Scripts/3-objects/LightSwitch.cs)
 
