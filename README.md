@@ -43,6 +43,7 @@ we added a light  bolb that turnning on\off when player is close enough and pess
 ## Credits
 
 Assignment solvers:
+
 Jessica fliker, Omri yonatani, Aviv vexler.
 
 Programming:
